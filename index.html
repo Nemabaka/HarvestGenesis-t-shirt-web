@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>HarvestGENESIS — T-Shirts</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo">HG</div>
+        <div class="brand-text"><span>Harvest</span><strong>GENESIS</strong></div>
+      </div>
+      <nav class="nav">
+        <a href="#products">Products</a>
+        <a href="#quote">Request Quote</a>
+        <a href="#about">About</a>
+      </nav>
+      <button id="open-cart" class="cart-btn">Cart (<span id="cart-count">0</span>)</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Custom T‑Shirts, <span class="accent">Made Simple</span></h1>
+        <p>Black & White • Sizes S–2XL • Prices start at <strong>R350</strong></p>
+        <a href="#products" class="btn btn-primary">Browse Tees</a>
+        <a href="#quote" class="btn">Request a Quote</a>
+      </div>
+    </section>
+
+    <section id="products" class="container section">
+      <h2>Products</h2>
+      <div id="products-grid" class="grid"></div>
+    </section>
+
+    <section id="quote" class="container section">
+      <h2>Request a Quote</h2>
+      <div class="two-col">
+        <form id="quote-form" class="card">
+          <label>Full name <input name="fullName" required/></label>
+          <label>Email <input name="email" type="email" /></label>
+          <label>Phone <input name="phone" /></label>
+          <label>Message <textarea name="message" rows="4" placeholder="Design details, quantities, deadline..."></textarea></label>
+          <div class="order-summary">
+            <strong>Order summary</strong>
+            <pre id="order-summary">No items in cart.</pre>
+            <div class="total">Estimated total: <span id="order-total">R0</span></div>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Quote (opens email)</button>
+          <p class="hint">This will open your email client with the quote pre-filled. To send directly from the site, integrate EmailJS or Formspree (instructions in README).</p>
+        </form>
+
+        <aside class="card cart-panel" id="cart-panel">
+          <h3>Your Cart</h3>
+          <div id="cart-items">No items yet.</div>
+          <div class="cart-footer">
+            <div>Subtotal: <strong id="cart-total">R0</strong></div>
+            <button id="checkout-quote" class="btn btn-primary">Proceed to Quote</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" class="container section">
+      <h2>About HarvestGENESIS</h2>
+      <p>We help people and businesses with brand essentials — from resumes and applications to posters, flyers, and now custom t‑shirts. Our tees are printed with care and delivered with professional service.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span id="year"></span> HarvestGENESIS — Accent <span class="accent">#0097b2</span></div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
